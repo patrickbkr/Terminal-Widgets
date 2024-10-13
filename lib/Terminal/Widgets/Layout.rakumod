@@ -488,6 +488,9 @@ class TextInput is SingleLineInput {
     method default-styles() { hash(set-h => 1) }
 }
 
+#| A terminal emulator
+class TerminalEmulator is Leaf { }
+
 
 #| A widget node; localizes xy coordinate frame for children
 #| (upper left of this widget becomes new 0,0 for children)
@@ -547,6 +550,7 @@ class Builder {
     method log-viewer(|c)    { self.build-leaf(LogViewer,    |c) }
     method plain-text(|c)    { self.build-leaf(PlainText,    |c) }
     method smoke-chart(|c)   { self.build-leaf(SmokeChart,   |c) }
+    method terminal-emulator(|c)      { self.build-leaf(TerminalEmulator,     |c) }
 
     # Input leaf nodes (no children ever)
     method menu(|c)          { self.build-leaf(Menu,         |c) }

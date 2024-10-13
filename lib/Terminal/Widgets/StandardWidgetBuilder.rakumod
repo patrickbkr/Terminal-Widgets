@@ -11,6 +11,7 @@ use Terminal::Widgets::Input::ToggleButton;
 use Terminal::Widgets::Input::Text;
 use Terminal::Widgets::Viewer::Log;
 use Terminal::Widgets::Viz::SmokeChart;
+use Terminal::Widgets::TerminalEmulator;
 
 
 #| Base class for dynamically building widgets, with knowledge of standard library
@@ -30,6 +31,7 @@ class Terminal::Widgets::StandardWidgetBuilder {
             Terminal::Widgets::Layout::TextInput    => Terminal::Widgets::Input::Text,
             Terminal::Widgets::Layout::LogViewer    => Terminal::Widgets::Viewer::Log,
             Terminal::Widgets::Layout::SmokeChart   => Terminal::Widgets::Viz::SmokeChart,
+            Terminal::Widgets::Layout::TerminalEmulator     => Terminal::Widgets::TerminalEmulator,
         }
     }
 

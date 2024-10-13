@@ -563,7 +563,7 @@ class Terminal::Widgets::Widget
     method composite(|) {
         my @dirty  := self.snapshot-dirty-areas;
         my @merged := self.merge-dirty-areas(@dirty);
-        my $debug   = +($*DEBUG // 0);
+        my $debug   = +($*DEBUG // 2);
 
         note 'Compositing:' if $debug >= 2;
         note Backtrace.new.Str.subst(/' at ' \S+/, '', :g) if $debug >= 3;
